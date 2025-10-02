@@ -1,7 +1,7 @@
 extends Node3D
 
 var timer:float = 0.0
-var something:int = 0
+var growing_number:int = 42
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +12,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		print("space bar was pressed!")
-		something+=1
-		print(something)
-	timer = timer + delta
-	print(timer)
+		growing_number+=5
+		print(growing_number)
